@@ -7,7 +7,7 @@
 // https://github.com/adafruit/Adafruit_NeoPixel/blob/master/examples/strandtest/strandtest.ino
 
 // this script is written for 2 Touch Boards in total (24 electrodes) 
-// and 4 LED substrips with different numbers of LEDs.
+// and 4 LED substrips with each 15 LEDs.
 // but these settings can be easily adjusted. This is clarified in the script. 
 // You can search for 'ADJUST'.
 
@@ -86,10 +86,10 @@ uint32_t colorscheme[] = {red, green, tule, blue};
 // make sure that the total length of the list is as long as the total number of electrodes. 
 // the electrodes that do not have a corresponding LED strip will then turn on some phantom LEDs.
 // In this case we had 4 electrodes which triggered LEDs, 
-// so 4 sub-strips that all had different numbers of LEDs. 
+// so 4 sub-strips that all have 15 LEDs. 
 // All the numbers after that are for activating LEDs that don't even exist.
  
-int first_leds[] = {0, 15, 28, 40, 55, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88}; 
+int first_leds[] = {0, 15, 30, 45, 60, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88}; 
 
 // ADJUST line 96 (if you use more than 2 touch boards, make sure the array of zeroes has the right number of electrodes.
 // save on/off status per electrode. We don't care about releases here. A touch is always single. If the electrode was off before, it turns on, vice versa. 
